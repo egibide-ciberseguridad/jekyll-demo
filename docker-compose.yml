@@ -1,0 +1,21 @@
+version: "3.5"
+
+services:
+
+  jekyll:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    hostname: workspace
+    environment:
+      - PS1=\u@\h:\w\$\040
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./sites:/sites
+      - homedir:/root
+      - gems:/usr/gems/
+
+volumes:
+  homedir:
+  gems:
