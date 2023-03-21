@@ -7,8 +7,6 @@ services:
       context: .
       dockerfile: Dockerfile
     hostname: workspace
-    environment:
-      - PS1=\u@\h:\w\$\040
     ports:
       - "4000:4000"
     volumes:
